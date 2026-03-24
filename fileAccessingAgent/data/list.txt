@@ -1,0 +1,13 @@
+ID_Pasien;Nama_Penyakit;Kategori;Gejala_Utama;Tingkat Bahaya;Update_Terakhir
+001;Diabetes Melitus;Tidk Menular;Sering haus, lemas, pandangan kabur;Tinggi;2023-01-15
+002;"influenza  ";Menular;Demam & Batuk;Sedang;15/02/2023
+3;hipertensi;Penyakit Dalam;pusing, tengkuk pegal;??;2023.03.10
+004;Demam Berdarah (Dengue);MENULAR;Bintik merah, demam tinggi, nyeri sendi;Sangat Tinggi;
+005;TBC;Menular;Batuk berdahak >2 minggu, berkeringat malam;High;2022-12-01
+006;Maag / Gastritis;Pencernaan;Nyeri lambung;Rendah;2023-05-20
+7;Covid-19;Virus;Sesak nafas, kehilangan indra perasa;V. High;2021-08-15
+008;Asma;Pernapasan;Sesak, mengi;Sedang;NULL
+9;Kanker Paru;Keganasan;Batuk darah, berat badan turun;Extremely High;2023-06-01
+010;"  Stroke";Saraf;Lumpuh sebagian, bicara pelo;Tinggi;12-12-2022
+11;Kolesterol;Penyakit dlm;Pegal di pundak;? ;2023-07-04
+012;Anemia;Penyakit Darah;Pucat, 5L (Lelah, Letih, Lesu...);Low;2023-01-20

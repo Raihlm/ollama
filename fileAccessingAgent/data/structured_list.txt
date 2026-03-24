@@ -1,0 +1,28 @@
+Here is the structured list of patients:
+
+**Patient Information**
+
+| ID_Pasien | Nama_Penyakit | Kategori | Gejala_Utama | Tingkat Bahaya |
+| --- | --- | --- | --- | --- |
+| 001 | Diabetes Melitus | Tidk Menular | Sering haus, lemas, pandangan kabur | Tinggi |
+| 002 | Influenza | Menular | Demam & Batuk | Sedang |
+| 003 | Hipertensi | Penyakit Dalam | Pusing, tengkuk pegal | ?? |
+| 004 | Demam Berdarah (Dengue) | MENULAR | Bintik merah, demam tinggi, nyeri sendi | Sangat Tinggi |
+| 005 | TBC | Menular | Batuk berdahak >2 minggu, berkeringat malam | High |
+| 006 | Maag / Gastritis | Pencernaan | Nyeri lambung | Rendah |
+| 007 | Covid-19 | Virus | Sesak nafas, kehilangan indra perasa | V. High |
+| 008 | Asma | Pernapasan | Sesak, mengi | Sedang |
+| 009 | Kanker Paru | Keganasan | Batuk darah, berat badan turun | Extremely High |
+| 010 | Stroke | Saraf | Lumpuh sebagian, bicara pelo | Tinggi |
+| 011 | Kolesterol | Penyakit Dalam | Pegal di pundak | ? |
+| 012 | Anemia | Penyakit Darah | Pucat, 5L (Lelah, Letih, Lesu...) | Low |
+
+**Notes:**
+
+* The `??` in the `Tingkat Bahaya` column for ID_003 is unclear and should be filled with a more specific value.
+* The `V. High` in the `Tingkat Bahaya` column for ID_007 is also unclear and should be specified as "Very High".
+* The `NULL` in the `Tingkat Bahaya` column for ID_008 indicates that there was an error or omission, which should be investigated.
+
+**Sorting:**
+
+If you want to sort the list by a specific column (e.g. `ID_Pasien`, `Nama_Penyakit`, etc.), please let me know and I can assist you with the sorting!
