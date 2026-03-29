@@ -1,13 +1,13 @@
 import ollama
 from langchain_community.document_loaders import UnstructuredPDFLoader
-from langchain_community.document_loaders import OnlinePDFLoader
+from langchain_community.document_loaders import OnlinePDFLoader, PyPDFLoader
 from langchain_ollama import OllamaEmbeddings, ChatOllama
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import Chroma
-from langchain.prompts import PromptTemplate, ChatPromptTemplate
-from langchain_core.output_parser import StrOutputParser
+from langchain_core.prompts import PromptTemplate, ChatPromptTemplate
+from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
-from langchain.retrievers.multi_query import MultiQueryRetriever
+from langchain_classic.retrievers import MultiQueryRetriever
 
 ollama.pull("nomic-embed-text")
 
@@ -46,3 +46,24 @@ QUERY_PROMPT = PromptTemplate(
     input_variables=["query"],
     template="Given the following query, retrieve relevant information from the document: {query}"
 )
+
+retriever = MultiQueryRetriever.from_llm(
+    vector_db.as_retriever(), llm, prompt=QUERY_PROMPT
+)
+
+# rag prompt
+template = """You are a helpful assistant for answering questions based on the retrieved information from the document.
+Use only the following retrieved information to answer the question. If you don't know the answer, say you don't know.
+{context}"""
+
+prompt = ChatPromptTemplate.from_template(template)
+
+chain = (
+    {"context": retriever, "question": RunnablePassthrough()}
+    | prompt 
+    | StrOutputParser()
+)
+
+res = chain.invoke("What are the main findings of the paper?")
+
+print(res)

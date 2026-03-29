@@ -11,3 +11,5 @@ unstructured[all-docs]
 fastembed
 sentence-transformers           
 elevenlabs
+pypdf
+langchain-chroma
